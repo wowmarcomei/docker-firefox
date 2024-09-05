@@ -53,6 +53,14 @@ RUN \
     find /usr/share/icons/Adwaita -type d -mindepth 1 -maxdepth 1 -not -name 16x16 -not -name scalable -exec rm -rf {} ';' && \
     true
 
+# 设置默认语言
+ENV LANG zh_CN.UTF-8
+ENV LANGUAGE zh_CN:zh
+ENV LC_ALL zh_CN.UTF-8
+
+# 添加Chinse，Japanese，Korea 字体
+ENV ENABLE_CJK_FONT 1
+
 # Install profile-cleaner.
 #RUN \
 #    add-pkg --virtual build-dependencies curl && \
