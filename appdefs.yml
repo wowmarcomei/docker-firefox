@@ -17,7 +17,7 @@ app:
     description: |-
       Mozilla Firefox is a free and open-source web browser developed by Mozilla
       Foundation and its subsidiary, Mozilla Corporation.
-    url: https://www.mozilla.org/en-US/firefox/
+    url: https://www.mozilla.org/firefox/
   unraid:
     support_url: https://forums.unraid.net/topic/69440-support-firefox/
     category: "Tools:"
@@ -102,6 +102,10 @@ app:
               for more details.
             - Make sure the kernel of your Linux distribution is up-to-date.
   changelog:
+    - version: 24.08.1
+      date: 2024-08-05
+      changes:
+        - 'Updated Firefox to version 128.0.3-r0.'
     - version: 24.07.1
       date: 2024-07-02
       changes:
