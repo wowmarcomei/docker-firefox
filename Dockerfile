@@ -53,13 +53,16 @@ RUN \
     find /usr/share/icons/Adwaita -type d -mindepth 1 -maxdepth 1 -not -name 16x16 -not -name scalable -exec rm -rf {} ';' && \
     true
 
+# 安装必要的包
+RUN apk add --no-cache fontconfig wqy-zenhei
+
+# 更新字体缓存
+RUN fc-cache -fv
+
 # 设置默认语言
 ENV LANG zh_CN.UTF-8
 ENV LANGUAGE zh_CN:zh
 ENV LC_ALL zh_CN.UTF-8
-
-# 添加Chinse，Japanese，Korea 字体
-ENV ENABLE_CJK_FONT 1
 
 # Install profile-cleaner.
 #RUN \
